@@ -1,0 +1,935 @@
+/* GENERAL */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: raleway;
+}
+
+h1 {
+    font-size: 1.3em;
+}
+
+h2 {
+    font-size: 1.37em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+h4 {
+    font-size: 1.25em;
+
+}
+
+p {
+    font-size: 1.06em;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+img {
+    object-fit: cover;
+}
+
+li {
+    list-style-type: none;
+    font-size: 1.06em;
+}
+
+.fa-star {
+    color: #f2f2f2;
+}
+
+.stars-check {
+    color: #0065FC;
+}
+
+/* HEADER */
+
+/* NAVIGATION */
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 2px 77px 50px 50px;
+}
+
+.logo {
+    margin-top: 49px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu ul {
+    display: flex;
+    width: 100%;
+}
+
+.menu li {
+    padding-right: 32px;
+    padding-left: 38px;
+    padding-top: 49px;
+    font-weight: bold;
+}
+
+.menu li:hover {
+    border-top: 2px solid #0065FC;
+    margin-top: -2px;
+}
+
+.menu li a:hover {
+    color: #0065FC;
+}
+
+nav {
+    display: flex;
+}
+
+.inscrire {
+    margin-top: 49px;
+    margin-left: 45px;
+}
+
+.inscrire a {
+    color: #0065FC;
+    font-weight: bold;
+}
+
+/* BARRE DE RECHERCHE */
+#recherche h1 {
+    margin-top: 50px;
+    margin-left: 55px;
+}
+
+#recherche p {
+    margin-top: 16px;
+    margin-left: 56px;
+}
+
+.recherche {
+    margin-left: 54px;
+    margin-top: 22px;
+}
+
+.recherche {
+    display: flex;
+}
+
+#search {
+    border: 1px solid #F2F2F2;
+    height: 49px;
+    width: 240px;
+    padding-left: 17px;
+    outline: 0;
+}
+
+input[type="search"]::-webkit-input-placeholder {
+    transition: opacity 0.3s linear;
+    color: #0065FC;
+}
+
+input[type="search"]:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    /* enleve la croix */
+    /*-webkit-appearance: none;*/
+    /* custom styles */
+    height: 10px;
+    width: 10px;
+    background: #0065FC;
+    border-radius: 100%;
+    margin-right: 15px;
+}
+
+i.fa-map-marker-alt {
+    background-color: #f2f2f2;
+    border: 1px solid #F2F2F2;
+    text-align: center;
+    border-radius: 10px 0px 0px 10px;
+    width: 52px;
+    height: 49px;
+    line-height: 49px;
+}
+
+button {
+    padding: 0 15px;
+    border: none;
+    background-color: #0065FC;
+    color: white;
+    border-radius: 0px 20px 20px 0px;
+    margin-left: -5px;
+    height: 49px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+
+}
+
+button:active {
+    box-shadow: inset -1px -1px 2px rgba(255, 255, 255, .6),
+        inset 1px 1px 2px rgba(0, 0, 0, .6);
+}
+
+button:hover {
+    background-color: #DEEBFF;
+    color: #0065FC;
+}
+
+button:focus {
+    outline: 0;
+    /*enleve la bordure quand on click dessus*/
+}
+
+button span {
+    font-weight: bold;
+}
+
+/* FILTRES */
+.filtres {
+    display: flex;
+    align-items: center;
+    margin-top: 49px;
+    margin-left: 63px;
+}
+
+#filtres {
+    display: flex;
+    margin-right: 32px;
+    font-weight: bold;
+}
+
+.filtres input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.filtres label {
+    cursor: pointer;
+    margin-right: 24px;
+    text-align: center;
+    height: 50px;
+    line-height: 46px;
+    background: white;
+    display: block;
+    border-radius: 100px;
+    border: 2px solid #f2f2f2;
+    position: relative;
+    font-size: 1.12em;
+    font-weight: bold;
+}
+
+.filtres label,
+.filtres class {
+    padding-left: 63px;
+    padding-right: 22px;
+}
+
+.filtres label:after {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: #deebff;
+    border-radius: 100px;
+    transition: 0.8s;
+    color: #0065fc;
+}
+
+.filtres input:hover+label {
+    background: #0065fc;
+    color: white;
+    padding-left: 22px;
+    padding-right: 63px;
+    line-height: 46px;
+    box-shadow: 0 0 5px black;
+}
+
+.filtres input:hover+label:after {
+    left: calc(100% - -3px);
+    transform: translatex(-100%);
+}
+
+.filtres label:active:after {
+    width: 50px;
+
+}
+
+.eco:after {
+    font-family: fontawesome;
+    content: "\f53a";
+}
+
+.fam:after {
+    font-family: fontawesome;
+    content: "\f1ae";
+}
+
+.rom:after {
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+    content: "\f004";
+    color: #0065fc;
+}
+
+.dog:after {
+    font-family: fontawesome;
+    content: "\f6d3";
+}
+
+/* INFOS */
+.info {
+    margin-top: 54px;
+    margin-left: 59px;
+}
+
+i.fa-info {
+    border: 1px solid #F2F2F2;
+    border-radius: 100%;
+    margin-right: 10px;
+    background-color: white;
+    color: #0065FC;
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    line-height: 22px;
+}
+
+/* MAIN */
+.main {
+    margin: 43px 50px 0 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* HEBERGEMENTS */
+#hebergements {
+    background-color: #f2f2f2;
+    width: 880px;
+    height: auto;
+    border-radius: 20px;
+    padding: 41px 40px 46px 40px;
+    margin-right: 40px;
+}
+
+.hebergements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.hebergements .vignette img {
+    height: 100%;
+    width: 236px;
+    max-height: 114px;
+    border-radius: 10px 10px 0 0;
+}
+
+.hebergements .vignette {
+    background: white;
+    width: 246px;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 23px;
+    margin-bottom: 7px;
+    box-shadow: 0 0 15px #ccc;
+}
+
+.hebergements .details h3 {
+    margin-bottom: 3px;
+}
+
+.hebergements .details p {
+    margin-bottom: 8px;
+    font-size: 0.87em;
+}
+
+.hebergements .details span {
+    font-weight: bold;
+    font-size: 0.87em;
+}
+
+.hebergements .details {
+    margin-left: 12px;
+    margin-bottom: 6px;
+}
+
+#hebergements h2 {
+    height: fit-content;
+}
+
+.hebergements h4 {
+    height: fit-content;
+    margin-top: 31px;
+    margin-left: 4px;
+}
+
+.hebergements h4 a:hover {
+    color: #0065FC;
+}
+
+.hebergements .vignette:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s;
+    box-shadow: 6px 6px 2px 5px #deebff, -6px -6px 2px 4px #0065fc82;
+    transform: skew(2deg, -2deg);
+}
+
+/*POPULAIRES*/
+#populaires {
+    background-color: #f2f2f2;
+    width: 420px;
+    height: auto;
+    border-radius: 20px;
+    padding: 42px 40px 34px 37px;
+}
+
+.populaires {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.populaires .vignette {
+    background: white;
+    width: 343px;
+    height: 144px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 26px;
+    box-shadow: 0 0 15px #ccc;
+}
+
+.populaires .vignette img {
+    width: 127px;
+    height: 134px;
+    max-height: 134px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.populaires .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 14px;
+    margin-bottom: 9px;
+    margin-left: 21px;
+    margin-right: 17px;
+}
+
+.populaires .details p {
+    font-size: 0.87em;
+}
+
+.populaires a {
+    display: flex;
+}
+
+#populaires h2 {
+    display: inline-block;
+    padding-left: 1px;
+}
+
+.fa-chart-line {
+    margin-left: 118px;
+}
+
+.populaires .vignette:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+/* ACTIVITES */
+#activites {
+    margin: 60px 53px 0 50px;
+
+}
+
+#activites h2 {
+    margin-bottom: 24px;
+}
+
+.activites a {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 20px;
+}
+
+.activites {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.activites .double {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+/*.activites .vignettes{
+    height: fit-content;
+  }  */
+
+.activites .vignettes img {
+    border-radius: 20px 20px 0 0;
+    width: 302px;
+    height: 445px
+}
+
+.activites .vignettes h3 {
+    background-color: white;
+    width: 302px;
+    height: 55px;
+    line-height: 55px;
+    padding-left: 19px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.activites .vignettes.port img {
+    max-height: 390px;
+}
+
+.activites .vignettes.pomegues img {
+    max-height: 182px;
+}
+
+.activites .vignettes.frioul img {
+    max-height: 110px;
+}
+
+.activites .vignettes.calanques img {
+    max-height: 390px;
+}
+
+.activites .vignettes.garde img {
+    max-height: 141px;
+}
+
+.activites .vignettes.longchamp img {
+    max-height: 154px;
+}
+
+.activites .vignettes h3:hover {
+    color: #0065FC;
+}
+
+.activites a:hover {
+    box-shadow: 7px 10px 10px 5px #ccc;
+}
+
+/* FOOTER */
+footer {
+    background-color: #ccc;
+    width: auto;
+    height: auto;
+    padding: 50px;
+    margin-top: 61px;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.footer li {
+    list-style-type: none;
+    padding-top: 10px;
+}
+
+.footer ul {
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.footer h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 7px;
+}
+
+.footer-block {
+    margin-right: auto;
+}
+
+footer a:hover {
+    color: #0065FC;
+}
+
+/*enleve la loupe sur grand ecrans*/
+@media screen and (min-width: 601px) {
+    button .fa-search {
+        display: none;
+    }
+}
+
+/*################################################*/
+/*############# -Inferieur a 1200px- #############*/
+/*################################################*/
+@media screen and (max-width: 1200px) {
+    .filtres label {
+        font-size: 1em;
+    }
+
+    .main {
+        flex-direction: column-reverse;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    #populaires {
+        width: auto;
+        background-color: unset;
+    }
+
+    #populaires h2 {
+        margin-left: 39px;
+    }
+
+    .populaires {
+        flex-direction: row;
+        font-size: 0.9em;
+        width: auto;
+    }
+
+    .populaires .vignette {
+        width: 290px;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    #hebergements {
+        align-self: center;
+        margin: auto;
+    }
+
+    #hebergements h2 {
+        text-align: center;
+    }
+
+    .hebergements {
+        justify-content: space-around;
+    }
+
+    #activites {
+        margin: auto;
+        margin-top: 44px;
+    }
+
+    #activites h2 {
+        text-align: center;
+    }
+
+    .activites {
+        justify-content: center;
+    }
+
+    .activites .vignettes {
+        padding: 20px;
+    }
+}
+
+/*######################################*/
+/*############# -TABLETTE- #############*/
+/*######################################*/
+@media screen and (max-width: 811px) and (min-width: 480px) {
+    #filtres {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .filtres {
+        display: flex;
+        align-items: center;
+        margin-top: 49px;
+        margin-left: 63px;
+        flex-wrap: wrap;
+    }
+
+    .filtres label,
+    .filtres class {
+        margin-bottom: 15px;
+    }
+
+    #populaires {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #populaires h2 {
+        margin-left: 27px;
+    }
+
+    .fa-chart-line {
+        position: absolute;
+        right: 67px;
+        margin: unset;
+    }
+
+    .populaires {
+        flex-wrap: wrap;
+    }
+
+    #hebergements {
+        width: 644px;
+    }
+
+    .hebergements {
+        display: grid;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(2, auto);
+        justify-items: center;
+    }
+
+    .hebergements h4 {
+        justify-self: baseline;
+        margin-left: unset;
+    }
+
+    #activites {
+        margin: auto;
+        margin-top: 44px;
+    }
+
+    #activites h2 {
+        text-align: center;
+    }
+
+    .activites {
+        justify-content: center;
+    }
+
+    .activites .vignettes {
+        padding: 20px;
+    }
+}
+
+/*###################################*/
+/*############# -PHONE- #############*/
+/*###################################*/
+@media screen and (max-width: 480px) {
+    .header {
+        flex-wrap: wrap;
+        margin: 0px;
+    }
+
+    .logo {
+        margin-top: 22px;
+        margin-left: 10px;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    .menu li {
+        border-bottom: 2px solid #ccc;
+        width: 100%;
+    }
+
+    .menu li:hover {
+        border-top: none;
+        margin-top: 0px;
+        border-bottom: 2px solid #0065FC;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .inscrire {
+        position: absolute;
+        right: 21px;
+        top: 43px;
+        margin: 0px;
+    }
+
+    #recherche h1 {
+        margin-top: 35px;
+        margin-left: 20px;
+        margin-right: 65px;
+    }
+
+    #recherche p {
+        margin-top: 12px;
+        margin-left: 21px;
+    }
+
+    button {
+        color: white;
+        width: 51px;
+        border-radius: 15px;
+        margin-left: -15px;
+    }
+
+    .recherche span {
+        display: none;
+    }
+
+    .recherche {
+        width: auto;
+        margin-left: 21px;
+        margin-top: 35px;
+        margin-right: 21px;
+    }
+
+    .filtres {
+        margin-left: 23px;
+        width: auto;
+        flex-wrap: wrap;
+    }
+
+    #filtres {
+        width: 100%;
+        margin-bottom: 18px;
+        margin-left: 5px;
+    }
+
+    .filtres label,
+    .filtres class {
+        margin: 5px;
+    }
+
+    .info {
+        margin-left: 20px;
+        margin-top: 25px;
+        display: flex;
+    }
+
+    i.fa-info {
+        display: table;
+    }
+
+    #populaires {
+        padding-left: 20px;
+        padding-right: 21px;
+        background-color: #f2f2f2;
+        border-radius: unset;
+    }
+
+    #populaires h2 {
+        margin-left: unset;
+    }
+
+    .fa-chart-line {
+        margin-left: 116px;
+    }
+
+    .populaires {
+        flex-direction: column;
+    }
+
+    .populaires .vignette {
+        width: 334px;
+    }
+
+    #hebergements {
+        background-color: unset;
+        padding-top: 36px;
+        padding-left: 21px;
+        padding-right: 21px;
+        width: auto;
+    }
+
+    #hebergements h2 {
+        text-align: unset;
+    }
+
+    .hebergements {
+        flex-direction: column;
+    }
+
+    .hebergements .vignette {
+        width: 335px;
+    }
+
+    .hebergements .vignette img {
+        width: 325px;
+    }
+
+    #activites {
+        margin-top: 12px;
+    }
+
+    #activites h2 {
+        text-align: unset;
+        margin-left: 21px;
+    }
+
+    .activites .vignettes {
+        padding: 12px;
+    }
+
+    .activites .vignettes img {
+        height: 134px;
+        width: 334px;
+    }
+
+    .activites .vignettes.frioul img {
+        max-height: unset;
+    }
+
+    footer {
+        margin-top: 38px;
+        padding-top: 19px;
+        padding-left: 29px;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer-block {
+        margin-bottom: 40px;
+    }
+
+}
+
+/*##############################################*/
+/*############# -PHONE Horizontal- #############*/
+/*##############################################*/
+@media screen and (min-width: 812px) and (max-width: 1024px) {
+    .filtres {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: unset;
+        margin-top: 25px;
+    }
+
+    .filtres label,
+    .filtres class {
+        margin: 5px;
+    }
+
+    .populaires {
+        flex-wrap: wrap;
+    }
+
+    #hebergements {
+        width: auto;
+    }
+
+    .hebergements h4 {
+        width: 100%;
+        text-align: center;
+    }
+}
